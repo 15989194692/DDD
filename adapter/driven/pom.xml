@@ -5,13 +5,14 @@
     <parent>
         <artifactId>DDD</artifactId>
         <groupId>com.lsz</groupId>
-        <version>1.0</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <version>${DDD-version}</version>
+    <packaging>jar</packaging>
 
     <artifactId>driven</artifactId>
+    <version>${DDD-version}</version>
 
     <dependencies>
         <dependency>
