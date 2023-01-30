@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lsz</groupId>
+    <artifactId>DDD</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+
+
+    <modules>
+        <module>domain</module>
+        <module>application</module>
+        <module>adapter</module>
+        <module>common</module>
+    </modules>
+
+    <properties>
+        <DDD-version>1.0</DDD-version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.lsz</groupId>
+                <artifactId>common</artifactId>
+                <version>${DDD-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lsz</groupId>
+                <artifactId>domain</artifactId>
+                <version>${DDD-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lsz</groupId>
+                <artifactId>application</artifactId>
+                <version>${DDD-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lsz</groupId>
+                <artifactId>adapter</artifactId>
+                <version>${DDD-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
