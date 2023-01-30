@@ -15,8 +15,9 @@
     <modules>
         <module>domain</module>
         <module>application</module>
-        <module>adapter</module>
         <module>common</module>
+        <module>adapter/driven</module>
+        <module>adapter/driving</module>
     </modules>
 
     <properties>
@@ -43,7 +44,12 @@
             </dependency>
             <dependency>
                 <groupId>com.lsz</groupId>
-                <artifactId>adapter</artifactId>
+                <artifactId>driven</artifactId>
+                <version>${DDD-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.lsz</groupId>
+                <artifactId>driving</artifactId>
                 <version>${DDD-version}</version>
             </dependency>
         </dependencies>
