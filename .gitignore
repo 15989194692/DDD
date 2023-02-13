@@ -22,3 +22,41 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+
+*~
+.DS_Store
+
+# .gitignore for maven
+target/
+*.releaseBackup
+
+# web application files
+#/web-app/WEB-INF
+
+# IDE support files
+/.classpath
+/.launch
+/.project
+/.settings
+/*.launch
+/*.tmproj
+/ivy*
+/eclipse
+
+## .gitignore for intellij
+
+*.iml
+*.ipr
+*.iws
+.idea/
+logs
+*.log
+
+## .gitignore for test
+**/test/**/*_res.yaml
+*_res.yaml
+ActsMenu.java
+
+
+
