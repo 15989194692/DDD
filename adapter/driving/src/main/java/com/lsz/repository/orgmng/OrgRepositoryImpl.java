@@ -15,6 +15,11 @@ import org.springframework.stereotype.Repository;
 public class OrgRepositoryImpl implements OrgRepository {
 
     @Override
+    public Org findById(Long id) {
+        return null;
+    }
+
+    @Override
     public void save(Org org) {
 
     }

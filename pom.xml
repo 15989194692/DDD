@@ -20,6 +20,7 @@
 
     <properties>
         <DDD-version>1.0</DDD-version>
+        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
     </properties>
 
     <dependencies>
@@ -57,10 +58,63 @@
                 <artifactId>driving</artifactId>
                 <version>${DDD-version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${org.mapstruct.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <plugins>
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>3.0.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                &lt;!&ndash;总pom里的版本建议定义成2.12.4，使用2.8.1版本时部分系统出现reporter类找不到的异常 &ndash;&gt;
+                <version>2.12.4</version>
+                <configuration>
+                    <argLine>-Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=256m</argLine>
+                    <forkMode>once</forkMode> &lt;!&ndash;once：在一个进程中进行所有测试，once为默认设置。always：在一个进程中并行的运行脚本 &ndash;&gt;
+                    <testFailureIgnore>true</testFailureIgnore> &lt;!&ndash;此参数表示当测试用例有异常，忽略异常的影响 &ndash;&gt;
+                    <includes>
+                        <include>**/*Test*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>-->
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
 
     <modules>

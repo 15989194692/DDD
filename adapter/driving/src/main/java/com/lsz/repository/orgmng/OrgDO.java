@@ -1,17 +1,18 @@
-package com.lsz.orgmng;
+/**
+ * Alipay.com Inc.
+ * Copyright (c) 2004-2023 All Rights Reserved.
+ */
+package com.lsz.repository.orgmng;
 
-import org.junit.Assert;
+import com.lsz.orgmng.OrgStatus;
 
 import java.util.Date;
 
 /**
- * @ClassName Org
- * @Description TODO
- * @Author lishuzeng
- * @Date 2023/1/30 下午7:36
- * @Version 1.0.0
- **/
-public class Org {
+ * @author lishuzeng
+ * @version : OrgDO.java, v 0.1 2023年02月13日 下午2:00 lishuzeng Exp $
+ */
+public class OrgDO {
 
     private Long id;
 
@@ -25,7 +26,7 @@ public class Org {
 
     private String name;
 
-    private OrgStatus status;
+    private String status;
 
     private Date createAt;
 
@@ -34,17 +35,6 @@ public class Org {
     private Date lastUpdatedAt;
 
     private Long lastUpdatedBy;
-
-
-    public void cancel() {
-        // 判断状态只有为有效才能取消
-        Assert.assertTrue(isEffective());
-        this.status = OrgStatus.CANCELLED;
-    }
-
-    public boolean isEffective() {
-        return this.status == OrgStatus.EFFECTIVE;
-    }
 
     public Long getId() {
         return id;
@@ -94,11 +84,11 @@ public class Org {
         this.name = name;
     }
 
-    public OrgStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(OrgStatus status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
